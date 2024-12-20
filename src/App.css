@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configurações gerais */
+html, body {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff6f61, #282c34);
+  color: white;
+}
+
+/* Contêiner principal */
+#root {
+  height: 100%; /* Garante que o root ocupe toda a altura do body */
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centraliza verticalmente */
+  align-items: center;      /* Centraliza horizontalmente */
+  height: 100%;             /* Ocupa toda a altura do contêiner pai */
+  text-align: center;
+  padding: 20px;
+  gap: 20px;                /* Espaçamento entre os elementos */
+}
+
+/* Cabeçalho */
+.App-header {
+  background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+  border: 2px solid #ff6f61;
+  border-radius: 15px;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center; /* Centraliza o conteúdo do cabeçalho */
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão inicial */
+.ask-button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ask-button:hover {
+  background-color: #ff3b2e;
+  transform: scale(1.05);
+}
+
+/* Container para a proposta */
+.ask-container {
+  margin-top: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.proposal-text {
+  font-size: 2rem;
+  color: #ff6f61;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Botões de resposta */
+.response-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espaçamento entre os botões */
+  flex-wrap: wrap; /* Caso o espaço não seja suficiente */
+}
+
+.yes-button, .no-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  max-width: 200px;
+}
+
+.yes-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.no-button {
+  background-color: #f44336;
+}
+
+.no-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Animação para suavizar a transição */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Decorações adicionais */
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

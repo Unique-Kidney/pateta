@@ -1,0 +1,77 @@
+/* src/CaoTriste.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.cao-triste-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    width: 100vw; /* Ocupa 100% da largura da tela */
+    background: linear-gradient(135deg, #4f6d7a, #2c3e50); /* Gradiente de azul */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.cao-triste-content {
+    max-width: 1000px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Fundo transparente preto */
+    border-radius: 10px;
+}
+
+.cao-triste-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: slideIn 3s ease-out;
+}
+
+.cao-triste-content p {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    animation: slideIn 3s ease-out;
+}
+
+.cao-triste-content img {
+    max-width: 100%; /* Para garantir que o GIF não ultrapasse o tamanho da tela */
+    border-radius: 10px;
+    opacity: 0; /* Começa invisível */
+    animation: fadeInImage 2s ease-in-out forwards; /* Animação para o GIF */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
